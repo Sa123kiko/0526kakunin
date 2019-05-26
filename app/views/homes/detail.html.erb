@@ -1,0 +1,13 @@
+<h1>制作物詳細ページ</h1>
+
+
+タイトル: <%= @x1.name %> 説明: <%= @x1.description %> 制作者: <%= @x1.creator %> 
+制作物URL: <%= @x1.seisakuurl %> 工程表URL: <%= @x1.kouteiurl %><br>
+
+<small><%= @review.created_at.strftime("%Y年%m月%d日") %></small>
+
+
+<p>コメント</p>
+<% @x .each do |xx| %>
+  名前: <%= xx.name %> コメント: <%= xx.comment %><br>
+<% end %>

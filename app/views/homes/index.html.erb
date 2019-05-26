@@ -1,0 +1,30 @@
+<h2>制作物一覧</h2>
+
+<ul>
+  <% @products.each do |product| %>
+  <li><%= link_to product.name, "/homes/" + product.id.to_s %></li>
+  <% end %>
+</ul>
+
+<div class="btn btn-primary">
+<%= link_to "新規作成する", homes_new_path %>
+</div>
+
+<div class="btn btn-primary"><a href="/homes/new">新規作成</a>
+</div>
+
+
+<div class="col-12">
+  <%= paginate @products %>
+</div>
+
+<style>
+h2 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.aaa{
+  color:red;
+}
+</style>

@@ -1,0 +1,2 @@
+class Kome < ApplicationRecord
+end

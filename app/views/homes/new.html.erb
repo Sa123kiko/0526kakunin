@@ -1,0 +1,25 @@
+<h1>制作物投稿フォーム</h1>
+<%= form_with model: @product,url: {action: "create"},local: true do |form| %>
+  <p>
+    タイトル：<br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    詳細：<br>
+    <%= form.text_area :description %>
+  </p>
+  <p>
+    制作者：<br>
+    <%= form.text_field :creator %>
+  </p>
+  <p>
+    制作物URL：<br>
+    <%= form.text_field :seisakuurl %>
+  </p>
+  <p>
+    工程表URL：<br>
+    <%= form.text_field :kouteiurl %>
+  </p>
+
+  <%= form.submit "登録" %>
+<% end %>
